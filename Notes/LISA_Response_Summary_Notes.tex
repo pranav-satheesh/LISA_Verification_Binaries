@@ -1,0 +1,70 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[spaces,hyphens]{url}
+\usepackage[colorlinks,allcolors=blue]{hyperref} 
+\title{LISA Response summary}
+\begin{document}
+\maketitle
+
+
+From section 3.1 of \cite{cornish}, we get the varying portion for the round trip to be,
+
+\begin{equation}
+\delta l(t_2) = \frac{L sin^2 \theta}{2} \ \tau(cos \theta,f) \left[ h_{+}(t_2) cos 2\psi + h_{x}(t_2) sin 2\psi \right]
+\end{equation}
+Where, we have considered the arm to be in the x-z plane $ \textbf{u} = \hat{x} \ sin \theta + \hat{z} \ cos \theta$ \\
+
+
+$\psi$ is the polarisation angle. $\tau$ is the transfer function as defined in eq(7) of \cite{cornish}
+
+Now from we consider the plus and cross polarisation amplitudes of a binary black hole with an angle of inclination $i$ with the line of sight $\hat{z}$ (3.27a and 3.27b) of \cite{whelan}
+
+We can then write,
+
+\begin{equation}
+h(t) = \frac{A(t)}{d}\ \left[ F_{+} \ \frac{1+ cos^2 i}{2} cos\Phi(t) + F_{\times} \ cosi \ sin\Phi(t) \right]
+\end{equation}
+
+Where the $F_{+} and F_{x}$ are the antenna response functions
+
+In the present case we can write 
+
+\begin{align}
+\delta l&=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left[\frac{1+cos^2 i}{2} \ cos 2\psi \ cos \Phi(t) + cos i \ sin 2\psi \ sin \Phi(t)\right]\\
+&=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+cos^2 i)^2}{4} cos^2 2\psi  + cos^2 i sin^2 2\psi} \right)cos(\Phi(t)-\Psi)
+\end{align}
+
+
+The general formula is given by eq(8) of \cite{cornish}
+
+FOr a general $\hat{\Omega}$ specified by $\theta,\omega$ in spherical coordinate system, we find that the antenna pattern becomes:
+
+\begin{align}
+F_{+}(\theta,\phi,\psi,i)&=\frac{(1+cos^2 i)}{2} \left[\frac{1}{2}(1+ cos^2 \theta) cos2\phi cos\psi - cos\theta sin2\phi sin2\psi \right]\\
+F_{\times}(\theta,\phi,\psi,i)&=cos i \left[\frac{1}{2}(1+ cos^2 \theta) cos2\phi cos\psi + cos\theta sin2\phi cos2\psi \right]\\ 
+\end{align}
+
+If we put back $\theta=0$ and $\phi=0$ in [5] and [6] we get back the responses in eq [4].
+
+The measured strain will be (as from eq 14 and 15)
+
+\begin{align}
+s&=\frac{\delta l_u (t) - \delta l_v (t)}{l}\\
+&=\textbf{D}(\hat{\Omega},f) : h(\hat{\Omega},f,x,t)
+\end{align}
+
+where $D(\hat{\Omega},f) = \frac{1}{2}\left((u \otimes u) \tau - (v \otimes v) \tau \right)$
+
+Depending on the orientation of the two arms specified by the u and v vector we get the final response as a function of the arm orientation,the orientation and location of binary.
+\begin{thebibliography}{9}
+
+\bibitem{cornish}				\url{https://arxiv.org/pdf/gr-qc/0103075.pdf}
+
+\bibitem{whelan} \url{https://dcc.ligo.org/public/0106/T1300666/003/Whelan_notes.pdf}
+\end{thebibliography}
+
+\end{document}
