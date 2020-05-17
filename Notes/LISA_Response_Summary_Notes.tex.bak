@@ -109,7 +109,7 @@ Now the fraction of the light recieved is,
 \frac{1}{4} \left(\frac{R}{c}\right)^2 \left(\frac{M}{M_{\odot}}\right)^{-2/3} \frac{T^{-4/3}}{(4 \pi^2)^{-2/3}} (5 \times 10^{-6})^{-2/3}
 \end{equation}
 
-For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light recie 
+For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be 0.01315 
 
 \begin{thebibliography}{9}
 
