@@ -28,6 +28,11 @@ Consider two LISA spacecraft, one ar the origin and another at a distance L away
 
 The spacecraft at origin sends a series of photons while the weak plane gravitational wave passes through space in the +z direction. Later we will generalize the source to be in a random direction.
 
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{../Figures/diagram1.jpg}
+\caption{The one arm arrangement with the source in the z-axis with angle of inclination $i$ and the arm along the vector \textbf{u} which lies in the x-z plane.}
+\end{figure}
 We can write the space-time metric in the transverse-traceless gauge (TT-Gauge). Here $\psi$ refers to the polarization angle.
 
  
@@ -41,31 +46,27 @@ ds^2 = - c^2 dt^2 + (1+ h_+ cos 2\psi + h_x sin 2 \psi) d x^2 +(1- h_+ cos 2\psi
 Using this metric we can  find the photon path similar to \cite{cornish}. Using that we compute the round trip journey from spacecraft 1 to spacecraft 2 and back again. 
 
 \begin{equation}
+\label{resp}
 \delta l(t_2) = \frac{L sin^2 \theta}{2} \ \tau(cos \theta,f) \left[ h_{+}(t_2) cos 2\psi + h_{x}(t_2) sin 2\psi \right]
 \end{equation}
 
 $\tau$ is the transfer function as defined in eq(7) of \cite{cornish}
 
-Now from we consider the plus and cross polarisation amplitudes of a binary black hole with an angle of inclination $i$ with the line of sight $\hat{z}$ (3.27a and 3.27b) \cite{whelan}
+Now from we consider the plus and cross polarisation amplitudes of a binary black hole with an angle of inclination $i$ with the line of sight $\hat{z}$ (3.27a and 3.27b) \cite{whelan}. 
 
-We can write the strain as \cite{whelan}
-,
-
-\begin{equation}
-h(t) = \frac{A(t)}{d}\ \left[ F_{+} \ \frac{1+ cos^2 i}{2} cos\Phi(t) + F_{\times} \ cosi \ sin\Phi(t) \right]
-\end{equation}
-
-Where $F_{+} and F_{x}$ are the antenna response functions. For the single arm case in LISA we find that
+Substituting the $h_{+}$ and $h_{x}$ expressions, eq [\ref{resp}] becomes,
 \begin{align}
 \delta l&=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left[\frac{1+cos^2 i}{2} \ cos 2\psi \ cos \Phi(t) + cos i \ sin 2\psi \ sin \Phi(t)\right]\\
 &=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+cos^2 i)^2}{4} cos^2 2\psi  + cos^2 i sin^2 2\psi} \right)cos(\Phi(t)-\Psi)
 \end{align}
 
+Where $\Phi(t) = 2 \pi f t + \Phi_0$.
 The total strain therefore depends on the angle of orientation of the arm $\theta$, the angle of inclination of the orbit $i$, the location of the source(in this case we took it as z-axis) and the polarization angle $\psi$
 
-A general coordinate free formula is given by eq(8) in \cite{cornish}. 
+A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
+ 
 
-For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns:
+For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns.\cite{whelan}
 
 \begin{align*}
 F_{+}(\theta_s,\phi,\psi,i)&=\frac{(1+cos^2 i)}{2} \left[\frac{1}{2}(1+ cos^2 \theta_s) cos2\phi cos\psi - cos\theta_s sin2\phi sin2\psi \right]\\
@@ -74,7 +75,14 @@ F_{\times}(\theta_s,\phi,\psi,i)&=cos i \left[\frac{1}{2}(1+ cos^2 \theta_s) cos
 
 If we put back $\theta_s=0$ and $\phi=0$ in these equations we get back the responses in eq [4].
 
-We can form an interferometer by introducing a third spacecraft at a distance L from the corner spacecraft and subrating the outputs of the two arms \cite{cornsih}
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.3]{../Figures/responsevsorientationofbinary.pdf}
+\caption{The response $\delta l$ variying with the polarization angle $\Psi$ for various inclination angle.}
+\end{figure}
+
+
+We can form an interferometer by introducing a third spacecraft at a distance L from the corner spacecraft and subrating the outputs of the two arms \cite{cornish} to get the total strain.
 
 
 \begin{align}
@@ -84,9 +92,7 @@ s(\hat{\Omega},f,\textbf{x},t)&=\frac{\delta l_u (t) - \delta l_v (t)}{l}\\
 
 where $$D(\hat{\Omega},f) = \frac{1}{2}\left((u \otimes u) \tau - (v \otimes v) \tau \right)$$
 
-is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors representing the direction of each interferometer arm. $\hat{\Omega}$ is the direction of propegation of the wave.
-
-We can use the orientation of LISA arms and compute the detetctor response functions $F_{+}$ and $F_{x}$
+is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors representing the direction of each interferometer arm. $\hat{\Omega}$ is the direction of propegation of the wave. We can use the orientation of LISA arms and compute the detetctor response functions $F_{+}$ and $F_{\times}$.
 
 
 \section*{HP Lib Verfication Binary}

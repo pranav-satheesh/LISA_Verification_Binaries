@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.22)  24 MAY 2020 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.1.22)  27 MAY 2020 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,52 +617,66 @@ ne 20.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../Figures/strain_verific_
 binary.pdf>]
-Overfull \hbox (8.38509pt too wide) detected at line 62
+<../Figures/diagram1.jpg, id=60, 597.432pt x 845.0772pt>
+File: ../Figures/diagram1.jpg Graphic file (type jpg)
+<use ../Figures/diagram1.jpg>
+Package pdftex.def Info: ../Figures/diagram1.jpg  used on input line 33.
+(pdftex.def)             Requested size: 149.35764pt x 211.26878pt.
+
+Overfull \hbox (8.38509pt too wide) detected at line 61
 []
  []
 
-
-LaTeX Warning: Citation `cornsih' on page 2 undefined on input line 77.
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+[2 <../Figures/diagram1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<diagram1.png, id=80, 778.91pt x 324.21124pt>
+<../Figures/responsevsorientationofbinary.pdf, id=78, 1084.05pt x 722.7pt>
+File: ../Figures/responsevsorientationofbinary.pdf Graphic file (type pdf)
+<use ../Figures/responsevsorientationofbinary.pdf>
+Package pdftex.def Info: ../Figures/responsevsorientationofbinary.pdf  used on 
+input line 80.
+(pdftex.def)             Requested size: 325.21751pt x 216.81166pt.
+[3 <../Figures/responsevsorientationofbinary.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+<diagram1.png, id=134, 778.91pt x 324.21124pt>
 File: diagram1.png Graphic file (type png)
 <use diagram1.png>
-Package pdftex.def Info: diagram1.png  used on input line 110.
+Package pdftex.def Info: diagram1.png  used on input line 116.
 (pdftex.def)             Requested size: 389.45406pt x 162.10522pt.
 
-Overfull \hbox (44.45406pt too wide) in paragraph at lines 110--112
+Overfull \hbox (44.45406pt too wide) in paragraph at lines 116--118
  [][] 
  []
 
 
-Package hyperref Warning: Suppressing empty link on input line 115.
+Package hyperref Warning: Suppressing empty link on input line 121.
 
-[3 <./diagram1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
+[4 <./diagram1.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (./LISA_Response_Summary_Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `LISA_Response_Summary_Notes.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 144.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 16421 strings out of 492609
- 284781 string characters out of 6131462
- 344994 words of memory out of 5000000
- 20227 multiletter control sequences out of 15000+600000
+ 16434 strings out of 492609
+ 285168 string characters out of 6131462
+ 343042 words of memory out of 5000000
+ 20236 multiletter control sequences out of 15000+600000
  540062 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,63p,556b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -679,10 +693,10 @@ amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on LISA_Response_Summary_Notes.pdf (4 pages, 180485 bytes).
+Output written on LISA_Response_Summary_Notes.pdf (5 pages, 288759 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
