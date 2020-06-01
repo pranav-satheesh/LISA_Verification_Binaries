@@ -8,12 +8,53 @@
 \usepackage{breqn}
 \usepackage[spaces,hyphens]{url}
 \usepackage[colorlinks,allcolors=blue]{hyperref} 
+
+\def\sinc{\mathop{\rm sinc}\nolimits}
+
 \title{Project Notes}
 \begin{document}
 \maketitle
 
 \section*{LISA Verification Binaries}
-The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$-1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
+The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
+
+\begin{equation}
+  \begin{aligned}
+    \begin{pmatrix}
+      h_+\\h_\times
+    \end{pmatrix}
+    = \frac{4G\mu v^2}{c^4 D}
+    \begin{pmatrix}
+    \frac12(1+\cos^2\iota) \cos(\omega t) \\
+    \cos\iota \sin(\omega t)
+    \end{pmatrix}
+  \end{aligned}
+\end{equation}
+
+\begin{equation}
+  ds^2 = -c^2 dt^2 + dz^2
+  + (1 + h\cos2\psi) dx^2 + (1 - h\cos2\psi) dy^2 - h\sin2\psi dx\,dy
+\end{equation}
+
+
+\begin{equation}
+  h(t) = \frac{4G\mu v^2}{c^4 D} \Big( {\textstyle\frac12}(1+\cos^2\iota)
+       + i\cos\iota \Big) \exp(i\omega t)
+\end{equation}
+
+\begin{equation}
+  \frac{\delta L}L = \tau(\omega,\theta,L) \, \cos2\psi \, h(t)
+\end{equation}
+where
+\begin{equation}
+\begin{aligned}
+  \tau(\omega,\theta,L) \equiv {\textstyle\frac12} \sin^2\theta
+  \Big( &\sinc(\alpha(1-\cos\theta))\,\exp(-i\alpha(3+\cos\theta)) \, + \\
+        &\sinc(\alpha(1+\cos\theta))\,\exp(-i\alpha(1+\cos\theta)) \Big)
+\end{aligned}  
+\end{equation}
+and $\alpha\equiv(\omega L)/(2c)$.
+
 
 \begin{figure}[ht]
 \centering
@@ -24,7 +65,7 @@ The Laser Interferometer Space Antenna(LISA) will be the first gravitational wav
 
 LISA's response function can be calculated by imagining it as a two arm Michelson interferometer. We first derive the response of a single arm and then cross correlate with the other to measure the total strain.
 
-Consider two LISA spacecraft, one ar the origin and another at a distance L away from it.  We choose the coordinate axes such that the spacecrafts lie in the x-z plane. The vector  $ \textbf{u} = \hat{x} \ sin \theta + \hat{z} \ cos \theta$ describes the single arm here.
+Consider two LISA spacecraft, one ar the origin and another at a distance L away from it.  We choose the coordinate axes such that the spacecrafts lie in the x-z plane. The vector  $ \textbf{u} = \hat{x} \ \sin \theta + \hat{z} \ \cos \theta$ describes the single arm here.
 
 The spacecraft at origin sends a series of photons while the weak plane gravitational wave passes through space in the +z direction. Later we will generalize the source to be in a random direction.
 
@@ -39,15 +80,15 @@ We can write the space-time metric in the transverse-traceless gauge (TT-Gauge).
 
 
 \begin{multline}
-ds^2 = - c^2 dt^2 + (1+ h_+ cos 2\psi + h_x sin 2 \psi) d x^2 +(1- h_+ cos 2\psi - h_x sin 2 \psi) d y^2 \\
- - 2(h_+ sin 2 \psi - h_x cos 2 \psi) dx dy + dz^2
+ds^2 = - c^2 dt^2 + (1+ h_+ \cos 2\psi + h_x \sin 2 \psi) d x^2 +(1- h_+ \cos 2\psi - h_x \sin 2 \psi) d y^2 \\
+ - 2(h_+ \sin 2 \psi - h_x \cos 2 \psi) dx dy + dz^2
 \end{multline}
 
 Using this metric we can  find the photon path similar to \cite{cornish}. Using that we compute the round trip journey from spacecraft 1 to spacecraft 2 and back again. 
 
 \begin{equation}
 \label{resp}
-\delta l(t_2) = \frac{L sin^2 \theta}{2} \ \tau(cos \theta,f) \left[ h_{+}(t_2) cos 2\psi + h_{x}(t_2) sin 2\psi \right]
+\delta l(t_2) = \frac{L \sin^2 \theta}{2} \ \tau(\cos \theta,f) \left[ h_{+}(t_2) \cos 2\psi + h_{x}(t_2) \sin 2\psi \right]
 \end{equation}
 
 $\tau$ is the transfer function as defined in eq(7) of \cite{cornish}
@@ -56,8 +97,8 @@ Now from we consider the plus and cross polarisation amplitudes of a binary blac
 
 Substituting the $h_{+}$ and $h_{x}$ expressions, eq [\ref{resp}] becomes,
 \begin{align}
-\delta l&=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left[\frac{1+cos^2 i}{2} \ cos 2\psi \ cos \Phi(t) + cos i \ sin 2\psi \ sin \Phi(t)\right]\\
-&=\frac{A(t) L sin^2 \theta \tau(cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+cos^2 i)^2}{4} cos^2 2\psi  + cos^2 i sin^2 2\psi} \right)cos(\Phi(t)-\Psi)
+\delta l&=\frac{A(t) L \sin^2 \theta \tau(\cos \theta,f)}{2d} \left[\frac{1+\cos^2 i}{2} \ \cos 2\psi \ \cos \Phi(t) + \cos i \ \sin 2\psi \ \sin \Phi(t)\right]\\
+&=\frac{A(t) L \sin^2 \theta \tau(\cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+\cos^2 i)^2}{4} \cos^2 2\psi  + \cos^2 i \sin^2 2\psi} \right)\cos(\Phi(t)-\Psi)
 \end{align}
 
 Where $\Phi(t) = 2 \pi f t + \Phi_0$.
@@ -69,8 +110,8 @@ A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
 For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns.\cite{whelan}
 
 \begin{align*}
-F_{+}(\theta_s,\phi,\psi,i)&=\frac{(1+cos^2 i)}{2} \left[\frac{1}{2}(1+ cos^2 \theta_s) cos2\phi cos\psi - cos\theta_s sin2\phi sin2\psi \right]\\
-F_{\times}(\theta_s,\phi,\psi,i)&=cos i \left[\frac{1}{2}(1+ cos^2 \theta_s) cos2\phi cos\psi + cos\theta sin2\phi cos2\psi \right]\\ 
+F_{+}(\theta_s,\phi,\psi,i)&=\frac{(1+\cos^2 i)}{2} \left[\frac{1}{2}(1+ \cos^2 \theta_s) \cos2\phi \cos\psi - \cos\theta_s \sin2\phi \sin2\psi \right]\\
+F_{\times}(\theta_s,\phi,\psi,i)&=\cos i \left[\frac{1}{2}(1+ \cos^2 \theta_s) \cos2\phi \cos\psi + \cos\theta \sin2\phi \cos2\psi \right]\\ 
 \end{align*}
 
 If we put back $\theta_s=0$ and $\phi=0$ in these equations we get back the responses in eq [4].
