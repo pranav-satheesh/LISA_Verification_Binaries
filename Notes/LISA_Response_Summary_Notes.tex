@@ -16,9 +16,9 @@
 \begin{document}
 \maketitle
 
-\section*{LISA Verification Binaries}
-The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
+\section{GW signal from a binary}
 
+A binary emits GW as follows.
 \begin{equation}
 \begin{pmatrix}
   h_+\\h_\times
@@ -30,14 +30,15 @@ The Laser Interferometer Space Antenna(LISA) will be the first gravitational wav
 \end{pmatrix}
 \exp(i\omega t)
 \end{equation}
+See Figure~\ref{fig:binary}
 
-
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.25]{../Figures/strain_verific_binary.pdf}
-\caption{The calculated strains due to LISA verification binaries and the sensitivity curve of LISA}
+\includegraphics[scale=0.25]{../Figures/diagram1.jpg}
+\caption{The one arm arrangement with the source in the z-axis with
+  angle of inclination $\iota$ and the arm along the vector \textbf{u}
+  which lies in the x-z plane.\label{fig:binary}}
 \end{figure}
-\section*{LISA Response Function}
 
 LISA's response function can be calculated by imagining it as a two arm Michelson interferometer. We first derive the response of a single arm and then cross correlate with the other to measure the total strain.
 
@@ -45,12 +46,8 @@ Consider two LISA spacecraft, one ar the origin and another at a distance L away
 
 The spacecraft at origin sends a series of photons while the weak plane gravitational wave passes through space in the +z direction. Later we will generalize the source to be in a random direction.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{../Figures/diagram1.jpg}
-\caption{The one arm arrangement with the source in the z-axis with angle of inclination $i$ and the arm along the vector \textbf{u} which lies in the x-z plane.}
-\end{figure}
-We can write the space-time metric in the transverse-traceless gauge (TT-Gauge). Here $\psi$ refers to the polarization angle.
+We can write the space-time metric in the transverse-traceless gauge
+(TT-Gauge). Here $\psi$ refers to the polarization angle.
 
 \begin{equation}
 \begin{aligned}
@@ -79,7 +76,10 @@ where
 \end{equation}
 and $\alpha\equiv(\omega L)/(2c)$.
 
-The total strain therefore depends on the angle of orientation of the arm $\theta$, the angle of inclination of the orbit $i$, the location of the source(in this case we took it as z-axis) and the polarization angle $\psi$
+The total strain therefore depends on the angle of orientation of the
+arm $\theta$, the angle of inclination of the orbit $\iota$, the
+location of the source(in this case we took it as z-axis) and the
+polarization angle $\psi$.  See Figure \ref{fig:resporient}.
 
 A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
  
@@ -87,23 +87,20 @@ A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.3]{../Figures/responsevsorientationofbinary.pdf}
-\caption{The response $\delta l$ variying with the polarization angle $\Psi$ for various inclination angle.}
+\caption{The response $\delta l/L$ varying with the polarization
+  angle $\psi$ for various inclination angle.\label{fig:resporient}}
 \end{figure}
 
 
-We can form an interferometer by introducing a third spacecraft at a distance L from the corner spacecraft and subrating the outputs of the two arms \cite{cornish} to get the total strain.
+\section*{LISA Verification Binaries}
+The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
 
 
-\begin{align}
-s(\hat{\Omega},f,\textbf{x},t)&=\frac{\delta l_u (t) - \delta l_v (t)}{l}\\
-&=\textbf{D}(\hat{\Omega},f) : h(\hat{\Omega},f,\textbf{x},t)
-\end{align}
-
-where $$D(\hat{\Omega},f) = \frac{1}{2}\left((u \otimes u) \tau - (v \otimes v) \tau \right)$$
-
-is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors representing the direction of each interferometer arm. $\hat{\Omega}$ is the direction of propegation of the wave. We can use the orientation of LISA arms and compute the detetctor response functions $F_{+}$ and $F_{\times}$.
-
-
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.25]{../Figures/strain_verific_binary.pdf}
+\caption{The calculated strains due to LISA verification binaries and the sensitivity curve of LISA}
+\end{figure}
 \section*{HP Lib Verfication Binary}
 
 We are interested in providing an independent prediction for $i$ and $\Psi$ for the AM CVn binary HP Lib. The binary consist of of on high mass white dwarf and a low mass star(brown dwarf).\\
@@ -196,4 +193,19 @@ F_{\times}(\theta_s,\phi,\psi,i)&=\cos i \left[\frac{1}{2}(1+ \cos^2 \theta_s) \
 \end{align*}
 
 If we put back $\theta_s=0$ and $\phi=0$ in these equations we get back the responses in eq [4].
+
+We can form an interferometer by introducing a third spacecraft at a distance L from the corner spacecraft and subrating the outputs of the two arms \cite{cornish} to get the total strain.
+
+
+\begin{align}
+s(\hat{\Omega},f,\textbf{x},t)&=\frac{\delta l_u (t) - \delta l_v (t)}{l}\\
+&=\textbf{D}(\hat{\Omega},f) : h(\hat{\Omega},f,\textbf{x},t)
+\end{align}
+
+where $$D(\hat{\Omega},f) = \frac{1}{2}\left((u \otimes u) \tau - (v \otimes v) \tau \right)$$
+
+is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors representing the direction of each interferometer arm. $\hat{\Omega}$ is the direction of propegation of the wave. We can use the orientation of LISA arms and compute the detetctor response functions $F_{+}$ and $F_{\times}$.
+
+
+
 
