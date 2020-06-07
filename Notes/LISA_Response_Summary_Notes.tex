@@ -16,7 +16,11 @@
 \begin{document}
 \maketitle
 
+<<<<<<< HEAD:Notes/LISA_Response_Summary_Notes1.tex
 \section*{GW signal from a binary}
+=======
+\section{GW signal from a binary}
+>>>>>>> 6e6808b1d3c6051e74363c30f0146964c373a011:Notes/LISA_Response_Summary_Notes.tex
 
 A binary emits GW as follows.
 \begin{equation}
@@ -25,8 +29,13 @@ A binary emits GW as follows.
 \end{pmatrix}
 = \frac{4G\mu v^2}{c^4 D}
 \begin{pmatrix}
+<<<<<<< HEAD:Notes/LISA_Response_Summary_Notes1.tex
   \frac12(1+\cos^2\iota) \cos(\omega t) \\
   \cos\iota \sin(\omega t)
+=======
+  \frac12(1+\cos^2\iota) \\
+  \cos\iota
+>>>>>>> 6e6808b1d3c6051e74363c30f0146964c373a011:Notes/LISA_Response_Summary_Notes.tex
 \end{pmatrix}
 \exp(i\omega t)
 \end{equation}
@@ -61,6 +70,7 @@ ds^2 &= -c^2 dt^2 + dz^2 \\
 Using this metric we can  find the photon path similar to
 \cite{cornish}.
 Using that we compute the round trip journey from spacecraft 1 to spacecraft 2 and back again.
+<<<<<<< HEAD:Notes/LISA_Response_Summary_Notes1.tex
 
 \begin{equation}
   \frac{\delta L}L = \tau(\omega,\theta,L) \,
@@ -77,12 +87,31 @@ where
 and $\alpha\equiv(\omega L)/(2c)$.
 
 In the low frequency limit, the transfer function $\tau$ is just of the order of one.
+=======
+
+\begin{equation}
+  \frac{\delta L}L = \tau(\omega,\theta,L) \,
+  \Big( h_+ \, \cos2\psi + h_\times \sin2\psi \Big)
+\end{equation}
+where
+\begin{equation}
+\begin{aligned}
+  \tau(\omega,\theta,L) \equiv {\textstyle\frac12} \sin^2\theta
+  \Big( &\sinc(\alpha(1-\cos\theta))\,\exp(-i\alpha(3+\cos\theta)) \, + \\
+        &\sinc(\alpha(1+\cos\theta))\,\exp(-i\alpha(1+\cos\theta)) \Big)
+\end{aligned}  
+\end{equation}
+and $\alpha\equiv(\omega L)/(2c)$.
+
+For very small frequency, $\tau$ is of the order of one.
+>>>>>>> 6e6808b1d3c6051e74363c30f0146964c373a011:Notes/LISA_Response_Summary_Notes.tex
 The total strain therefore depends on the angle of orientation of the
 arm $\theta$, the angle of inclination of the orbit $\iota$, the
 location of the source(in this case we took it as z-axis) and the
 polarization angle $\psi$.  See Figure \ref{fig:resporient}.
 
 A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
+<<<<<<< HEAD:Notes/LISA_Response_Summary_Notes1.tex
  
 In general the strain $h(t)$ can be written as a linear combination of $h_{+}(t)$ and $h_{\times}(t)$.
 
@@ -129,6 +158,23 @@ F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ cos^2\theta_s) \ cos2\phi_s \
 \end{figure}
 
 \newpage
+=======
+
+Substituting eq[1] in eq[3],the strain equation becomes:
+\begin{equation}
+\frac{\delta L}{L}=frac{A(t) sin^2 \theta \tau(cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+cos^2 i)^2}{4} cos^2 2\psi  + cos^2 i sin^2 2\psi} \right)cos(\Phi(t)-\Psi)
+\end{equation}
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.3]{../Figures/responsevsorientationofbinary.pdf}
+\caption{The response $\delta l/L$ varying with the polarization
+  angle $\psi$ for various inclination angle.\label{fig:resporient}}
+\end{figure}
+
+
+>>>>>>> 6e6808b1d3c6051e74363c30f0146964c373a011:Notes/LISA_Response_Summary_Notes.tex
 \section*{LISA Verification Binaries}
 The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
 
@@ -163,10 +209,83 @@ We are interested in providing an independent prediction for $i$ and $\Psi$ for 
 
 Consider the verification binary HP Lib with masses $m_1$ and $m_2$ and period P \ref{1}. We can find the fraction of light recieved by the brown dwarf $m_2$ in the following way:
 
-The flux from mass $m1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance d is given by $L/4 \pi d^2$. The cross section area for brown dwarf is $\pi R^2$.
+The flux from mass $m1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance $a$cis given by $L/4 \pi a^2$. The cross section area for brown dwarf is $\pi R^2$.
 
 
-Therefore, the total flux recieved is: $$\frac{L}{4 \pi d^2} \ \pi R^2 = \frac{L}{4} \ \left(\frac{R}{d}\right)^2 $$ where R is the radius of the brown dwarf and d is the seperation.
+Therefore, the total flux received is:
+$$\frac{L}{4 \pi d^2} \ \pi R^2 = \frac{L}{4} \ \left(\frac{R}{a}\right)^2 $$
+where R is the radius of the brown dwarf and $a$ is the seperation.
+From Kepler's third law, using the Earth's orbit as a reference, we have
+\begin{equation}
+  \frac{1}{4} \left(\frac{R}{\rm 1\,au}\right)^2
+  \left(\frac{M}{M_{\odot}}\right)^{-2/3}
+  \left(\frac{P}{P_{\oplus}}\right)^{-4/3}
+\end{equation}
+For a first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be $\approx 0.01$.
+
+
+\bibliographystyle{aa}
+\bibliography{refs.bib}
+
+\end{document}
+
+\begin{thebibliography}{9}
+
+\bibitem{cornish}				\url{https://arxiv.org/pdf/gr-qc/0103075.pdf}
+
+\bibitem{whelan} \url{https://dcc.ligo.org/public/0106/T1300666/003/Whelan_notes.pdf}
+\end{thebibliography}
+
+
+
+
+
+
+\begin{multline}
+ds^2 = - c^2 dt^2 + (1+ h_+ \cos 2\psi + h_x \sin 2 \psi) d x^2 +(1- h_+ \cos 2\psi - h_x \sin 2 \psi) d y^2 \\
+ - 2(h_+ \sin 2 \psi - h_x \cos 2 \psi) dx dy + dz^2
+\end{multline}
+
+\begin{equation}
+\label{resp}
+\delta l(t_2) = \frac{L \sin^2 \theta}{2} \ \tau(\cos \theta,f) \left[ h_{+}(t_2) \cos 2\psi + h_{x}(t_2) \sin 2\psi \right]
+\end{equation}
+
+$\tau$ is the transfer function as defined in eq(7) of \cite{cornish}
+
+Now from we consider the plus and cross polarisation amplitudes of a binary black hole with an angle of inclination $i$ with the line of sight $\hat{z}$ (3.27a and 3.27b) \cite{whelan}. 
+
+Substituting the $h_{+}$ and $h_{x}$ expressions, eq [\ref{resp}] becomes,
+\begin{align}
+\delta l&=\frac{A(t) L \sin^2 \theta \tau(\cos \theta,f)}{2d} \left[\frac{1+\cos^2 i}{2} \ \cos 2\psi \ \cos \Phi(t) + \cos i \ \sin 2\psi \ \sin \Phi(t)\right]\\
+&=\frac{A(t) L \sin^2 \theta \tau(\cos \theta,f)}{2d} \left( \sqrt{ \frac{(1+\cos^2 i)^2}{4} \cos^2 2\psi  + \cos^2 i \sin^2 2\psi} \right)\cos(\Phi(t)-\Psi)
+\end{align}
+
+Where $\Phi(t) = 2 \pi f t + \Phi_0$.
+
+For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns.\cite{whelan}
+
+\begin{align*}
+F_{+}(\theta_s,\phi,\psi,i)&=\frac{(1+\cos^2 i)}{2} \left[\frac{1}{2}(1+ \cos^2 \theta_s) \cos2\phi \cos\psi - \cos\theta_s \sin2\phi \sin2\psi \right]\\
+F_{\times}(\theta_s,\phi,\psi,i)&=\cos i \left[\frac{1}{2}(1+ \cos^2 \theta_s) \cos2\phi \cos\psi + \cos\theta \sin2\phi \cos2\psi \right]\\ 
+\end{align*}
+
+If we put back $\theta_s=0$ and $\phi=0$ in these equations we get back the responses in eq [4].
+
+We can form an interferometer by introducing a third spacecraft at a distance L from the corner spacecraft and subrating the outputs of the two arms \cite{cornish} to get the total strain.
+
+
+\begin{align}
+s(\hat{\Omega},f,\textbf{x},t)&=\frac{\delta l_u (t) - \delta l_v (t)}{l}\\
+&=\textbf{D}(\hat{\Omega},f) : h(\hat{\Omega},f,\textbf{x},t)
+\end{align}
+
+where $$D(\hat{\Omega},f) = \frac{1}{2}\left((u \otimes u) \tau - (v \otimes v) \tau \right)$$
+
+is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors representing the direction of each interferometer arm. $\hat{\Omega}$ is the direction of propegation of the wave. We can use the orientation of LISA arms and compute the detetctor response functions $F_{+}$ and $F_{\times}$.
+
+
+
 
 We can estimate d from the time period of the orbit. We know from Kepler's 3rd law that, $T^2 = \frac{4 \pi^{2}}{G (m_1 + m_2)} d^3$. We will denote $M=m_1 + m_2$
 
@@ -180,6 +299,7 @@ Now the fraction of the light recieved is,
 \begin{equation}
 \frac{1}{4} \left(\frac{R}{c}\right)^2 \left(\frac{M}{M_{\odot}}\right)^{-2/3} \frac{T^{-4/3}}{(4 \pi^2)^{-2/3}} (5 \times 10^{-6})^{-2/3}
 \end{equation}
+<<<<<<< HEAD:Notes/LISA_Response_Summary_Notes1.tex
 
 For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be 0.01315
 
@@ -246,3 +366,5 @@ is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors 
 
 
 
+=======
+>>>>>>> 6e6808b1d3c6051e74363c30f0146964c373a011:Notes/LISA_Response_Summary_Notes.tex
