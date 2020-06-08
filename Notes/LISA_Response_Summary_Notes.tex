@@ -12,7 +12,8 @@
 
 \def\sinc{\mathop{\rm sinc}\nolimits}
 
-\title{Project Notes}
+\title{Polarization in a LISA verification binary}
+
 \begin{document}
 \maketitle
 
@@ -25,8 +26,8 @@ A binary emits GW as follows.
 \end{pmatrix}
 = \frac{4G\mu v^2}{c^4 D}
 \begin{pmatrix}
-  \frac12(1+\cos^2\iota) \cos(\omega t) \\
-  \cos\iota \sin(\omega t)
+  \frac12(1+\cos^2\iota) \\
+  \cos\iota
 \end{pmatrix}
 \exp(i\omega t)
 \end{equation}
@@ -93,7 +94,7 @@ h(t) = F_{+}(\theta_s,\phi_s,\psi_s) h_{+}(t) + F_{\times}(\theta_s,\phi_s,\psi_
 We can rewrite the signal from the binary in the conventional amplitude-and-phase form.
 
 \begin{equation}
-h(t) = -A(t) cos[2\Phi(t) +\varphi]
+h(t) = -A(t) \cos[2\Phi(t) +\varphi]
 \end{equation}
 
 where $A(t)$ is given by
@@ -105,18 +106,26 @@ A(t) = \frac{2 G \mu M}{c^4 a D}\left([1+(\hat{\textbf{L}} \cdot \hat{\textbf{N}
 \end{equation}
 
 Where $\hat{\textbf{L}}$ and $\hat{\textbf{N}}$ are the unit vectors along the angular momentum of the binary and the one along the line of sight in the detector frame respectively. $\phi(t)$ represents the phase. 
-Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
+Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = \cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
 
+The "detector beam patterns" $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
+
+<<<<<<< HEAD
 The detector beam patterns $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
 
 \begin{equation}
 \psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
 \end{equation}
 
+=======
+\begin{equation}
+\psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
+\end{equation}
+>>>>>>> 69ab9deb15bfab8571a98100d6eff887f9edff9d
 
 \begin{align}
-F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ cos^2\theta_s) \ cos2\phi_s \ cos2\psi_s - cos\theta_s \ sin 2\phi_s \ sin 2\psi_s\\
-F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ cos^2\theta_s) \ cos2\phi_s \ cos2\psi_s + cos\theta_s \ sin 2\phi_s \ sin 2\psi_s
+F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s - \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s\\
+F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s + \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s
 \end{align}
 
 
@@ -151,9 +160,9 @@ We are interested in providing an independent prediction for $i$ and $\Psi$ for 
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-\rule[-1ex]{0pt}{2.5ex} Source & m1($M_{\odot}$) & m2($M_{\odot}$) & $P_{orb}$(sec) \\ 
+\rule[-1ex]{0pt}{2.5ex} Source & m_1($M_{\odot}$) & m_2($M_{\odot}$) & $P_{\rm orb}$(sec) \\ 
 \hline 
-\rule[-1ex]{0pt}{2.5ex} HP Lib & 0.49-0.80 & 0.048-0.08 & 1102.70 \\ 
+\rule[-1ex]{0pt}{2.5ex} HP Lib & 0.49--0.80 & 0.048--0.08 & 1102.70 \\ 
 \hline 
 \end{tabular}
 \caption{The estimated values of mass and time period of HP Lib}
@@ -168,25 +177,20 @@ We are interested in providing an independent prediction for $i$ and $\Psi$ for 
 
 Consider the verification binary HP Lib with masses $m_1$ and $m_2$ and period P \ref{1}. We can find the fraction of light recieved by the brown dwarf $m_2$ in the following way:
 
-The flux from mass $m1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance d is given by $L/4 \pi d^2$. The cross section area for brown dwarf is $\pi R^2$.
+The flux from mass $m_1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance $d$cis given by $L/4 \pi d^2$. The cross section area for brown dwarf is $\pi R^2$.
 
-
-Therefore, the total flux recieved is: $$\frac{L}{4 \pi d^2} \ \pi R^2 = \frac{L}{4} \ \left(\frac{R}{d}\right)^2 $$ where R is the radius of the brown dwarf and d is the seperation.
-
-We can estimate d from the time period of the orbit. We know from Kepler's 3rd law that, $T^2 = \frac{4 \pi^{2}}{G (m_1 + m_2)} d^3$. We will denote $M=m_1 + m_2$
-
-\begin{align*}
-\frac{d}{c}&=\left(\frac{GM}{c^3}\right)^{1/3} \frac{T^{2/3}}{(4 \pi^{2})^{1/3}}\\
-&=\frac{\left(\frac{GM}{c^3}\right)^{1/3}}{\left(\frac{GM_{\odot}}{c^3}\right)^{1/3}} \frac{T^{2/3}}{(4\pi^2)^{1/3}} (5 \times 10^{-6})^{1/3}
-\end{align*}
-
-Now the fraction of the light recieved is,
-
+Therefore, the total flux received is:
 \begin{equation}
-\frac{1}{4} \left(\frac{R}{c}\right)^2 \left(\frac{M}{M_{\odot}}\right)^{-2/3} \frac{T^{-4/3}}{(4 \pi^2)^{-2/3}} (5 \times 10^{-6})^{-2/3}
+\frac{L}{4 \pi d^2} \ \pi R^2 = \frac{L}{4} \ \left(\frac{R}{d}\right)^2
 \end{equation}
-
-For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be 0.01315
+where $R$ is the radius of the brown dwarf and $d$ is the separation.
+From Kepler's third law, using the Earth's orbit as a reference, we have
+\begin{equation}
+  \frac{1}{4} \left(\frac{R}{\rm 1\,au}\right)^2
+  \left(\frac{M}{M_{\odot}}\right)^{-2/3}
+  \left(\frac{P}{P_{\oplus}}\right)^{-4/3}
+\end{equation}
+For a first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be $\approx 0.01$.
 
 \bibliographystyle{aa}
 \bibliography{refs.bib}
@@ -227,7 +231,7 @@ Substituting the $h_{+}$ and $h_{x}$ expressions, eq [\ref{resp}] becomes,
 
 Where $\Phi(t) = 2 \pi f t + \Phi_0$.
 
-For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns.\cite{whelan}
+For a general location of the binary ($\hat{\Omega}$) specified by $\theta_s,\omega$ in spherical coordinate system, we can derive the antenna beam patterns\cite{whelan}.T
 
 \begin{align*}
 F_{+}(\theta_s,\phi,\psi,i)&=\frac{(1+\cos^2 i)}{2} \left[\frac{1}{2}(1+ \cos^2 \theta_s) \cos2\phi \cos\psi - \cos\theta_s \sin2\phi \sin2\psi \right]\\
@@ -251,3 +255,26 @@ is the detector response tensor. \textbf{u} and \textbf{v} are the unit vectors 
 
 
 
+
+
+Consider the verification binary HP Lib with masses $m_1$ and $m_2$ and period P \ref{1}. We can find the fraction of light recieved by the brown dwarf $m_2$ in the following way:
+
+The flux from mass $m1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance d is given by $L/4 \pi d^2$. The cross section area for brown dwarf is $\pi R^2$.
+
+
+Therefore, the total flux recieved is: $$\frac{L}{4 \pi d^2} \ \pi R^2 = \frac{L}{4} \ \left(\frac{R}{d}\right)^2 $$ where R is the radius of the brown dwarf and d is the seperation.
+
+We can estimate d from the time period of the orbit. We know from Kepler's 3rd law that, $T^2 = \frac{4 \pi^{2}}{G (m_1 + m_2)} d^3$. We will denote $M=m_1 + m_2$
+
+\begin{align*}
+\frac{d}{c}&=\left(\frac{GM}{c^3}\right)^{1/3} \frac{T^{2/3}}{(4 \pi^{2})^{1/3}}\\
+&=\frac{\left(\frac{GM}{c^3}\right)^{1/3}}{\left(\frac{GM_{\odot}}{c^3}\right)^{1/3}} \frac{T^{2/3}}{(4\pi^2)^{1/3}} (5 \times 10^{-6})^{1/3}
+\end{align*}
+
+Now the fraction of the light recieved is,
+
+\begin{equation}
+\frac{1}{4} \left(\frac{R}{c}\right)^2 \left(\frac{M}{M_{\odot}}\right)^{-2/3} \frac{T^{-4/3}}{(4 \pi^2)^{-2/3}} (5 \times 10^{-6})^{-2/3}
+\end{equation}
+
+For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be 0.01315
