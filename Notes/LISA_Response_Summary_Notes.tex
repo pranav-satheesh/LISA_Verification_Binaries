@@ -25,8 +25,8 @@ A binary emits GW as follows.
 \end{pmatrix}
 = \frac{4G\mu v^2}{c^4 D}
 \begin{pmatrix}
-  \frac12(1+\cos^2\iota) \cos(\omega t) \\
-  \cos\iota \sin(\omega t)
+  \frac12(1+\cos^2\iota) \\
+  \cos\iota
 \end{pmatrix}
 \exp(i\omega t)
 \end{equation}
@@ -93,7 +93,7 @@ h(t) = F_{+}(\theta_s,\phi_s,\psi_s) h_{+}(t) + F_{\times}(\theta_s,\phi_s,\psi_
 We can rewrite the signal from the binary in the conventional amplitude-and-phase form.
 
 \begin{equation}
-h(t) = -A(t) cos[2\Phi(t) +\varphi]
+h(t) = -A(t) \cos[2\Phi(t) +\varphi]
 \end{equation}
 
 where $A(t)$ is given by
@@ -105,13 +105,13 @@ A(t) = \frac{2 G \mu M}{c^4 a D}\left([1+(\hat{\textbf{L}} \cdot \hat{\textbf{N}
 \end{equation}
 
 Where $\hat{\textbf{L}}$ and $\hat{\textbf{N}}$ are the unit vectors along the angular momentum of the binary and the one along the line of sight in the detector frame respectively. $\phi(t)$ represents the phase. 
-Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
+Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = \cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
 
 The "detector beam patterns" $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$)
 
 \begin{align}
-F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ cos^2\theta_s) \ cos2\phi_s \ cos2\psi_s - cos\theta_s \ sin 2\phi_s \ sin 2\psi_s\\
-F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ cos^2\theta_s) \ cos2\phi_s \ cos2\psi_s + cos\theta_s \ sin 2\phi_s \ sin 2\psi_s
+F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s - \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s\\
+F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s + \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s
 \end{align}
 
 
