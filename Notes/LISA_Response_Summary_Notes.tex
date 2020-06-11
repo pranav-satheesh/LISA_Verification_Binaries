@@ -15,41 +15,63 @@
 \title{Polarization in a LISA verification binary}
 
 \begin{document}
+
 \maketitle
 
-\section*{GW signal from a binary}
+\section{GW signal from a binary}
 
-A binary emits GW as follows.
+According to general relativity, gravitational waves have two
+polarizations $h_+(t)$ and $h_\times(t)$.  The time dependence can be
+anything, but here we are interested in the case where both have the
+same period but are out of phase.  A GW interferometer measures a
+time dependent strain
+\begin{equation}
+  \frac{\delta L}L = 
+  \left( h_+ \, F_+ + h_\times \, F_\times \right)
+\end{equation}
+where $F_+$ and $F_\times$ are the response functions of the
+instrument.  If the signal is periodic, the amplitude of the measured
+signal will be
+\begin{equation}
+  \left(|h_+ \, F_+|^2 + |h_\times \, F_\times|^2 \right)^{1/2}
+\end{equation}
+Let us now consider what $h_+,h_\times,F_+,F_\times$ depend on.
+
+A binary emits GW as
 \begin{equation}
 \begin{pmatrix}
   h_+\\h_\times
 \end{pmatrix}
-= \frac{4G\mu v^2}{c^4 D}
+= \frac{8GE}{c^4 D}
 \begin{pmatrix}
   \frac12(1+\cos^2\iota) \\
-  \cos\iota
+  i\cos\iota
 \end{pmatrix}
 \exp(i\omega t)
 \end{equation}
-See Figure~\ref{fig:binary}
+where $E$ is the orbital energy and $\omega$ is twice the orbital
+frequency.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.25]{../Figures/diagram1.jpg}
-\caption{The one arm arrangement with the source in the z-axis with
-  angle of inclination $\iota$ and the arm along the vector \textbf{u}
-  which lies in the x-z plane.\label{fig:binary}}
+\caption{The one arm arrangement with the source on the $z$-axis with
+  angle of inclination $\iota$ and the arm in the $x$-$z$
+  plane.\label{fig:binary}}
 \end{figure}
 
-LISA's response function can be calculated by imagining it as a two arm Michelson interferometer. We first derive the response of a single arm and then cross correlate with the other to measure the total strain.
-
-Consider two LISA spacecraft, one ar the origin and another at a distance L away from it.  We choose the coordinate axes such that the spacecrafts lie in the x-z plane. The vector  $ \textbf{u} = \hat{x} \ \sin \theta + \hat{z} \ \cos \theta$ describes the single arm here.
-
-The spacecraft at origin sends a series of photons while the weak plane gravitational wave passes through space in the +z direction. Later we will generalize the source to be in a random direction.
-
-We can write the space-time metric in the transverse-traceless gauge
-(TT-Gauge). Here $\psi$ refers to the polarization angle.
-
+We now consider the geometry in Figure~\ref{fig:binary}.  We take the
+$z$ axis to be the line of sight.  The binary is on a circular orbit
+inclined at angle $\iota$ to the line of sight ($\iota=0$ is face-on)
+and the inclination has a position angle $\psi$.  This last angle
+applies a rotation to $h_+$ and $h_\times$ and is the polarization
+angle.  A GW interferometer may have two perpendicular arms (LIGO) or
+three arms in a triangle (LISA).  For our purposes, however, it is
+enough to consider a single arm.  We take this arm to be in the
+$x$-$z$ plane and at angle $\theta$ with respect to the line of sight.
+The spacecraft at the origin sends a series of photons while the weak
+plane gravitational wave passes through space in the $+z$ direction.
+The metric in the transverse-traceless gauge is
 \begin{equation}
 \begin{aligned}
 ds^2 &= -c^2 dt^2 + dz^2 \\
@@ -58,16 +80,22 @@ ds^2 &= -c^2 dt^2 + dz^2 \\
 &- 2(h_+\sin2\psi - h_\times\cos2\psi) \, dx\,dy
 \end{aligned}
 \end{equation}
-
-Using this metric we can  find the photon path similar to
-\cite{cornish}.
-Using that we compute the round trip journey from spacecraft 1 to spacecraft 2 and back again.
-
+Using this metric we can
+compute the round trip of a photon along an arm of length $L$ and 
+back again.  Extending the derivation given in \cite{cornish} for
+one polarization to two polarizations, we get
 \begin{equation}
-  \frac{\delta L}L = \tau(\omega,\theta,L) \,
-  \Big( h_+ \, \cos2\psi + h_\times \sin2\psi \Big)
+\begin{pmatrix}
+  F_+\\F_\times
+\end{pmatrix}
+= {\textstyle\frac12} \sin^2\theta 
+\begin{pmatrix}
+  \cos2\psi\\
+  \sin2\psi
+\end{pmatrix}
+\tau(\omega,\theta,L) 
 \end{equation}
-where
+The last factor is
 \begin{equation}
 \begin{aligned}
   \tau(\omega,\theta,L) \equiv {\textstyle\frac12} \sin^2\theta
@@ -75,64 +103,15 @@ where
         &\sinc(\alpha(1+\cos\theta))\,\exp(-i\alpha(1+\cos\theta)) \Big)
 \end{aligned}  
 \end{equation}
-and $\alpha\equiv(\omega L)/(2c)$.
-
-In the low frequency limit, the transfer function $\tau$ is just of the order of one.
-The total strain therefore depends on the angle of orientation of the
-arm $\theta$, the angle of inclination of the orbit $\iota$, the
-location of the source(in this case we took it as z-axis) and the
-polarization angle $\psi$.  See Figure \ref{fig:resporient}.
-
-A general coordinate free formula is given by eq(8) in \cite{cornish}.\\
- 
-In general the strain $h(t)$ can be written as a linear combination of $h_{+}(t)$ and $h_{\times}(t)$.
-
+where $\alpha\equiv(\omega L)/(2c)$.  In the low frequency limit
+$\tau\to1$.  The measured strain is then
 \begin{equation}
-h(t) = F_{+}(\theta_s,\phi_s,\psi_s) h_{+}(t) + F_{\times}(\theta_s,\phi_s,\psi_s)
+\frac{2GE}{c^4 D} \sin^2\theta
+  \left((1+\cos^2\iota)^2 \cos^2 2\psi + 4\cos^2\iota \sin^2 2\psi\right)^{1/2}
 \end{equation}
-
-We can rewrite the signal from the binary in the conventional amplitude-and-phase form.
-
-\begin{equation}
-h(t) = -A(t) \cos[2\Phi(t) +\varphi]
-\end{equation}
-
-where $A(t)$ is given by
-
-
-
-\begin{equation}
-A(t) = \frac{2 G \mu M}{c^4 a D}\left([1+(\hat{\textbf{L}} \cdot \hat{\textbf{N}})^2]^2 F_{+}^2(\theta_s,\phi_s,\psi_s) + 4[\hat{\textbf{L}} \cdot \hat{\textbf{N}}]^2 F_{\times}^2(\theta_s,\phi_s,\psi_s) \right)^{\frac{1}{2}}
-\end{equation}
-
-Where $\hat{\textbf{L}}$ and $\hat{\textbf{N}}$ are the unit vectors along the angular momentum of the binary and the one along the line of sight in the detector frame respectively. $\phi(t)$ represents the phase. 
-Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = \cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
-
-The detector beam patterns $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
-
-
-The detector beam patterns $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
-
-\begin{equation}
-\psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
-\end{equation}
-
-\begin{equation}
-\psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
-\end{equation}
-
-
-\begin{align}
-F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s - \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s\\
-F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s + \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s
-\end{align}
-
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.6]{../Figures/directions.pdf}
-\caption{The definitions of various directions used in the equations. Left figure shows how the binary projected on the sky looks like.\label{fig:directions}}
-\end{figure}
+which as we see depends on the angle of orientation of the arm
+$\theta$ with respect to the line of sight, the angle of inclination
+of the orbit $\iota$, and the polarization angle $\psi$.
 
 \begin{figure}[!h]
 \centering
@@ -140,6 +119,12 @@ F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s
 \caption{The response $\delta l/L$ varying with the polarization
   angle $\psi$ for various inclination angle.\label{fig:resporient}}
 \end{figure}
+
+
+A general coordinate free formula is given by eq.~(8) in \cite{cornish}.
+\citep{ACST}.
+\citep{cutler}
+ 
 
 \newpage
 \section*{LISA Verification Binaries}
@@ -277,3 +262,61 @@ Now the fraction of the light recieved is,
 \end{equation}
 
 For the first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be 0.01315
+
+----
+
+
+
+LISA's response function can be calculated by imagining it as a two arm Michelson interferometer. We first derive the response of a single arm and then cross correlate with the other to measure the total strain.
+
+Consider two LISA spacecraft, one ar the origin and another at a distance L away from it.  We choose the coordinate axes such that the spacecrafts lie in the x-z plane. The vector  $ \textbf{u} = \hat{x} \ \sin \theta + \hat{z} \ \cos \theta$ describes the single arm here.
+
+In general the strain $h(t)$ can be written as a linear combination of $h_{+}(t)$ and $h_{\times}(t)$.
+
+\begin{equation}
+h(t) = F_{+}(\theta_s,\phi_s,\psi_s) h_{+}(t) + F_{\times}(\theta_s,\phi_s,\psi_s)
+\end{equation}
+
+We can rewrite the signal from the binary in the conventional amplitude-and-phase form.
+
+\begin{equation}
+h(t) = -A(t) \cos[2\Phi(t) +\varphi]
+\end{equation}
+
+where $A(t)$ is given by
+
+
+
+\begin{equation}
+A(t) = \frac{2 G \mu M}{c^4 a D}\left([1+(\hat{\textbf{L}} \cdot \hat{\textbf{N}})^2]^2 F_{+}^2(\theta_s,\phi_s,\psi_s) + 4[\hat{\textbf{L}} \cdot \hat{\textbf{N}}]^2 F_{\times}^2(\theta_s,\phi_s,\psi_s) \right)^{\frac{1}{2}}
+\end{equation}
+
+Where $\hat{\textbf{L}}$ and $\hat{\textbf{N}}$ are the unit vectors along the angular momentum of the binary and the one along the line of sight in the detector frame respectively. $\phi(t)$ represents the phase. 
+Also, $\hat{\textbf{L}} \cdot \hat{\textbf{N}} = \cos \ \iota$ where $\iota$ is the inclination of the binary. These are defined in the Figure \ref{fig:directions} from \citep{ACST}.\\ 
+
+The detector beam patterns $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
+
+
+The detector beam patterns $F_{+}$ and $F_{\times}$ depend on the source direction and the  polarization angle $\psi$.\citep{cutler}. The polarization angle $\psi$ is the angle from the principal + direction ($\hat{\textbf{N}} \times \hat{\textbf{L}}$) , clockwise in the plane of sky to the azimuth($\hat{\textbf{N}} \times (\hat{\textbf{N}} \times \hat{\textbf{z}})$). The polarization angle $\psi$ can be thus expressed as:
+
+\begin{equation}
+\psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
+\end{equation}
+
+\begin{equation}
+\psi = tan^{-1} \left(\frac{\hat{\textbf{L}}\cdot \hat{\textbf{z}} - (\hat{\textbf{L}}\cdot \hat{\textbf{N}})(\hat{\textbf{z}} \cdot \hat{\textbf{N}})}{\hat{\textbf{N}} \cdot (\hat{\textbf{L}} \times \hat{\textbf{z}})}\right)
+\end{equation}
+
+
+\begin{align}
+F_{+}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s - \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s\\
+F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s \ \cos2\psi_s + \cos\theta_s \ \sin 2\phi_s \ \sin 2\psi_s
+\end{align}
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.6]{../Figures/directions.pdf}
+\caption{The definitions of various directions used in the equations. Left figure shows how the binary projected on the sky looks like.\label{fig:directions}}
+\end{figure}
+
