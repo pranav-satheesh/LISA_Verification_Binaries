@@ -112,6 +112,8 @@ $\tau\to1$.  The measured strain is then
 which as we see depends on the angle of orientation of the arm
 $\theta$ with respect to the line of sight, the angle of inclination
 of the orbit $\iota$, and the polarization angle $\psi$.
+Figure~\ref{fig:resporient} illustrates the dependence on $\iota$ and
+$\psi$.
 
 \begin{figure}[!h]
 \centering
@@ -120,31 +122,33 @@ of the orbit $\iota$, and the polarization angle $\psi$.
   angle $\psi$ for various inclination angle.\label{fig:resporient}}
 \end{figure}
 
-
-A general coordinate free formula is given by eq.~(8) in \cite{cornish}.
-\citep{ACST}.
-\citep{cutler}
+There are several other ways of expressing the strain.  \cite{cornish}
+in their eq.~(8) give a coordinate-free formula.  \cite{ACST}
+consider a LIGO-like system with the arms along the $x$ and $y$ axes.
+\cite{cutler} considers a pair of LISA arms.
  
-
 \newpage
-\section*{LISA Verification Binaries}
-The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed 'verification binaries'.
+\section{LISA Verification Binaries}
 
+The Laser Interferometer Space Antenna(LISA) will be the first gravitational wave observatory in space. LISA will be operating in the low frequency part of the gravitational wave spectrum($10^4$--1 Hz). In this range, we expect to observe lots of ultracompact binaries with orbital periods shorter than few hours. Out of these UCBs, AM CVn type binaries are of particular interest. Due to therir strong GW signals, they are guaranteed to be  detetcted on LISA band. These are termed `verification binaries'.
+
+We are interested in providing an independent measurement of $\psi$ and if possible $\iota$.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.25]{../Figures/strain_verific_binary.pdf}
 \caption{The calculated strains due to LISA verification binaries and the sensitivity curve of LISA}
 \end{figure}
-\section*{HP Lib Verfication Binary}
 
-We are interested in providing an independent prediction for $i$ and $\Psi$ for the AM CVn binary HP Lib. The binary consist of of on high mass white dwarf and a low mass star(brown dwarf).\\
+\section{HP Lib Verfication Binary}
+
+The most promising system appears to be the AM CVn binary HP Lib. The binary consist of a high-mass white dwarf and a low-mass star (brown dwarf).
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-\rule[-1ex]{0pt}{2.5ex} Source & m_1($M_{\odot}$) & m_2($M_{\odot}$) & $P_{\rm orb}$(sec) \\ 
+\rule[-1ex]{0pt}{2.5ex} Source & $m_1$($M_{\odot}$) & $m_2$($M_{\odot}$) & $P_{\rm orb}$(sec) \\ 
 \hline 
 \rule[-1ex]{0pt}{2.5ex} HP Lib & 0.49--0.80 & 0.048--0.08 & 1102.70 \\ 
 \hline 
@@ -152,16 +156,13 @@ We are interested in providing an independent prediction for $i$ and $\Psi$ for 
 \caption{The estimated values of mass and time period of HP Lib}
 \end{table}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.5]{diagram1.png}
-\label{1}
-\caption{The binary system HP Lib}
-\end{figure}
+Consider the verification binary HP Lib with masses $m_1$ and $m_2$
+and period $P$. We can find the fraction of light received by the
+brown dwarf $m_2$ in the following way:
 
-Consider the verification binary HP Lib with masses $m_1$ and $m_2$ and period P \ref{1}. We can find the fraction of light recieved by the brown dwarf $m_2$ in the following way:
-
-The flux from mass $m_1$ obeys the inverse square law. Assuming a luminosity L, the flux at a distance $d$cis given by $L/4 \pi d^2$. The cross section area for brown dwarf is $\pi R^2$.
+The flux from mass $m_1$ obeys the inverse square law. Assuming a
+luminosity $L$, the flux at a distance $d$ is given by $L/4 \pi
+d^2$. The cross section area for brown dwarf is $\pi R^2$.
 
 Therefore, the total flux received is:
 \begin{equation}
@@ -174,7 +175,9 @@ From Kepler's third law, using the Earth's orbit as a reference, we have
   \left(\frac{M}{M_{\odot}}\right)^{-2/3}
   \left(\frac{P}{P_{\oplus}}\right)^{-4/3}
 \end{equation}
-For a first estimate, we can take $R/c \approx 0.1$ which if we subtitute above give an estimate of the light received to be $\approx 0.01$.
+For a first estimate, we can take $R/c \approx 0.1$ which if we
+substitute above we estimate the fraction of light received is
+$\approx 0.01$.
 
 \bibliographystyle{aa}
 \bibliography{refs.bib}
@@ -318,5 +321,12 @@ F_{\times}(\theta_s,\phi_s,\psi_s)&=\frac{1}{2}(1+ \cos^2\theta_s) \ \cos2\phi_s
 \centering
 \includegraphics[scale=0.6]{../Figures/directions.pdf}
 \caption{The definitions of various directions used in the equations. Left figure shows how the binary projected on the sky looks like.\label{fig:directions}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{diagram1.png}
+\label{1}
+\caption{The binary system HP Lib}
 \end{figure}
 
