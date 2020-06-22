@@ -144,16 +144,16 @@ We are interested in providing an independent measurement of $\psi$ and if possi
 
 The most promising system appears to be the AM CVn binary HP Lib. The binary consist of a high-mass white dwarf and a low-mass star (brown dwarf).
 
-The mass of the binaries are found from the orbital and superhumb periods. The suerhump relation $\epsilon(q)$ gives a mass ratio of $q = 0.068 \pm 0.007$. \cite{Patterson} also gives the masses M1 and M2. The inclination of the system is reported in \cite{Roelofs}
+The mass of the binaries are found from the orbital and superhumb periods. The suerhump relation $\epsilon(q)$ gives a mass ratio of $q = 0.068 \pm 0.007$. [1] also gives the masses M1 and M2. The inclination of the system is reported in 
 
 
-Also, the radius of the secondary can be found using the reation mentioned in \citep{Patterson}
+Also, the radius of the secondary can be found using the reation mentioned in 
 
 \begin{equation}
-R_{zs} = 0.0155 \ m_2^{-0.212}
+R_{zs} = 0.0155 m_2^{-0.212}
 \end{equation}
 
-For $m_2 = 0.048$, $R_2 = 0.030$ in solar units.
+For $m_2 = 0.048$, $R_2 = 0.030
 
 \begin{table}[H]
 \centering
@@ -168,7 +168,7 @@ For $m_2 = 0.048$, $R_2 = 0.030$ in solar units.
 \label{table1}
 \end{table}
 
-Table [\ref{table1}] lists the estimated values as mentioned in paper \cite{Roelofs}\\
+Table [\ref{table1}] lists the estimated values as mentioned in paper 2\\
 
 
 

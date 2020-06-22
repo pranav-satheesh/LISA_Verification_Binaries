@@ -1,0 +1,26 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Apostolatos {et~al.}(1994)Apostolatos, Cutler, Sussman, \&
+  Thorne}]{ACST}
+Apostolatos, T.~A., Cutler, C., Sussman, G.~J., \& Thorne, K.~S. 1994, Phys.
+  Rev. D, 49, 6274
+
+\bibitem[{{Cornish} \& {Larson}(2001)}]{cornish}
+{Cornish}, N.~J. \& {Larson}, S.~L. 2001, Classical and Quantum Gravity, 18,
+  3473
+
+\bibitem[{Cutler(1998)}]{cutler}
+Cutler, C. 1998, Physical Review D, 57, 7089–7102
+
+\bibitem[{{Patterson} {et~al.}(2002){Patterson}, {Fried}, {Rea}, {Kemp},
+  {Espaillat}, {Skillman}, {Harvey}, {O'Donoghue}, {McCormick}, {Velthuis},
+  {Walker}, {Retter}, {Lipkin}, {Butterworth}, {McGee}, \& {Cook}}]{Patterson}
+{Patterson}, J., {Fried}, R.~E., {Rea}, R., {et~al.} 2002, \pasp, 114, 65
+
+\bibitem[{Roelofs {et~al.}(2007)Roelofs, Groot, Benedict, McArthur, Steeghs,
+  Morales‐Rueda, Marsh, \& Nelemans}]{Roelofs}
+Roelofs, G. H.~A., Groot, P.~J., Benedict, G.~F., {et~al.} 2007, The
+  Astrophysical Journal, 666, 1174–1188
+
+\end{thebibliography}
