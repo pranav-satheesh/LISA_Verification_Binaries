@@ -152,7 +152,6 @@ Also, the radius of the secondary can be found using the reation mentioned in \c
 \begin{equation}
 R_{zs} = 0.0155 \ m_2^{-0.212}
 \end{equation}
-
 For $m_2 = 0.048$, $R_2 = 0.030$ in solar units.
 
 \begin{table}[H]
@@ -191,11 +190,13 @@ From Kepler's third law, using the Earth's orbit as a reference, we have
   \left(\frac{M}{M_{\odot}}\right)^{-2/3}
   \left(\frac{P}{P_{\oplus}}\right)^{-4/3}
 \end{equation}
-For a first estimate, we can take $R/c \approx 0.07$ which if we
-substitute above we estimate the fraction of light received is
-$\approx 0.0064$.
+For a first estimate, we can take $R = 0.03R_\odot$ or $R/c \approx
+0.07$ which if we substitute above we estimate the fraction of light
+received is $\approx 0.0064$.
 
-The apparent magnitude in the $M_V$ band is $\approx 13.7$
+From the light curves (Fig.4) of \citep{Patterson}, the apparent magnitude in the V band ($M_V$) is $\approx 13.7$.
+
+\def\pasp{PASP}
 
 \bibliographystyle{aa}
 \bibliography{refs.bib}
